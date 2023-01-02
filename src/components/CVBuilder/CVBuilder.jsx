@@ -1,14 +1,32 @@
 import About from "./About";
 import Education from "./Education";
 
-const CVBuilder = ({ aboutSection, aboutSectionHandler }) => {
+const CVBuilder = ({
+  aboutSection,
+  aboutSectionHandler,
+  educationSection,
+  educationSectionHandler,
+  addEducation,
+  deleteEducation,
+}) => {
   return (
     <div className="space-y-2">
       <About
         aboutSection={aboutSection}
         aboutSectionHandler={aboutSectionHandler}
       />
-      <Education />
+      {educationSection.map((educationPart, index) => {
+        return (
+          <Education
+            key={Math.floor(Math.random() * 256)}
+            indexNumber={index}
+            educationSection={educationPart}
+            educationSectionHandler={educationSectionHandler}
+            onAdd={addEducation}
+            onDelete={deleteEducation}
+          />
+        );
+      })}
     </div>
   );
 };
