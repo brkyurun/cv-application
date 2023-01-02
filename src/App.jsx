@@ -22,6 +22,15 @@ function App() {
       schoolGraduate: "",
     },
   ]);
+  const [experience, setExperience] = useState([
+    {
+      jobTitle: "",
+      companyName: "",
+      companyLocation: "",
+      startDate: "",
+      endDate: "",
+    },
+  ]);
 
   function handleAboutSectionChange(e) {
     setAboutSection((prevState) => {
