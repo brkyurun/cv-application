@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import CVBuilder from "./components/CVBuilder";
+import Footer from "./components/Footer";
 import { useState } from "react";
 
 function App() {
@@ -112,6 +113,7 @@ function App() {
           deleteExperience={handleExperienceSectionDelete}
         />
       </main>
+      <Footer />
     </>
   );
 }
