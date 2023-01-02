@@ -1,5 +1,6 @@
 const Input = ({
   labelText = "",
+  name,
   inputType,
   inputId,
   inputValue,
@@ -17,6 +18,7 @@ const Input = ({
       <input
         type={inputType}
         id={inputId}
+        name={name}
         placeholder={placeholder}
         value={inputValue}
         onChange={inputHandler}

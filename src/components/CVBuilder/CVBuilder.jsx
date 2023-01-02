@@ -18,7 +18,7 @@ const CVBuilder = ({
       {educationSection.map((educationPart, index) => {
         return (
           <Education
-            key={Math.floor(Math.random() * 256)}
+            key={index}
             indexNumber={index}
             educationSection={educationPart}
             educationSectionHandler={educationSectionHandler}

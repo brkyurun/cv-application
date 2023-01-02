@@ -8,6 +8,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="First Name:"
         inputId="firstName"
+        name="firstName"
         inputType="text"
         placeholder="Mark"
         inputValue={aboutSection.firstName}
@@ -16,6 +17,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="Last Name:"
         inputId="lastName"
+        name="lastName"
         inputType="text"
         placeholder="Johnson"
         inputValue={aboutSection.lastName}
@@ -24,6 +26,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="Title:"
         inputId="jobTitle"
+        name="jobTitle"
         inputType="text"
         placeholder="Senior Vim Addict"
         inputValue={aboutSection.jobTitle}
@@ -32,6 +35,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="Address:"
         inputId="address"
+        name="address"
         inputType="text"
         placeholder="London / England"
         inputValue={aboutSection.address}
@@ -40,6 +44,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="Phone:"
         inputId="phone"
+        name="phone"
         inputType="tel"
         placeholder="+1 821-842-25-73"
         inputValue={aboutSection.phone}
@@ -48,6 +53,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
       <Input
         labelText="E-mail:"
         inputId="mailAddress"
+        name="mailAddress"
         inputType="email"
         placeholder="markjohnson@example.com"
         inputValue={aboutSection.mailAddress}

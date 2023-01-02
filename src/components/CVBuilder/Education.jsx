@@ -16,7 +16,8 @@ const Education = ({
     >
       <Input
         labelText="School:"
-        inputId={`schoolName`}
+        inputId={`schoolName-${indexNumber + 1}`}
+        name="schoolName"
         inputType="text"
         placeholder="Cambridge University"
         inputValue={educationSection.schoolName}
@@ -24,7 +25,8 @@ const Education = ({
       />
       <Input
         labelText="Location:"
-        inputId={`schoolLocation`}
+        inputId={`schoolLocation-${indexNumber + 1}`}
+        name="schoolLocation"
         inputType="text"
         placeholder="London / England"
         inputValue={educationSection.schoolLocation}
@@ -32,7 +34,8 @@ const Education = ({
       />
       <Input
         labelText="Degree:"
-        inputId={`schoolDegree`}
+        inputId={`schoolDegree-${indexNumber + 1}`}
+        name="schoolDegree"
         inputType="text"
         placeholder="B.A. / B.Sc. / Bachelor's"
         inputValue={educationSection.schoolDegree}
@@ -40,7 +43,8 @@ const Education = ({
       />
       <Input
         labelText="Subject:"
-        inputId={`schoolSubject`}
+        inputId={`schoolSubject-${indexNumber + 1}`}
+        name="schoolSubject"
         inputType="text"
         placeholder="Computer Science"
         inputValue={educationSection.schoolSubject}
@@ -48,7 +52,8 @@ const Education = ({
       />
       <Input
         labelText="Year Started:"
-        inputId={`schoolStart`}
+        inputId={`schoolStart-${indexNumber + 1}`}
+        name="schoolStart"
         inputType="text"
         placeholder="2017"
         inputValue={educationSection.schoolStart}
@@ -56,7 +61,8 @@ const Education = ({
       />
       <Input
         labelText="Year Graduated:"
-        inputId={`schoolGraduate`}
+        inputId={`schoolGraduate-${indexNumber + 1}`}
+        name="schoolGraduate"
         inputType="text"
         placeholder="lol never"
         inputValue={educationSection.schoolGraduate}
@@ -72,7 +78,7 @@ const Education = ({
         </button>
         <button
           type="button"
-          onClick={onDelete}
+          onClick={() => onDelete(indexNumber)}
           className="text-bold text-md w-28 rounded-md bg-red-500 py-2 transition-colors duration-100 ease-out hover:scale-105 hover:bg-red-400"
         >
           Delete

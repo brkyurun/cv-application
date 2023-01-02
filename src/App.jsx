@@ -25,31 +25,16 @@ function App() {
 
   function handleAboutSectionChange(e) {
     setAboutSection((prevState) => {
-      return { ...prevState, [e.target.id]: e.target.value };
+      return { ...prevState, [e.target.name]: e.target.value };
     });
+    console.log(e.target.name);
   }
 
   function handleEducationSectionChange(e, indexNumber) {
-    // TO DO //
-    // 1. Filter the state array to remove the currently changing object
-    // 2. Update the object
-    // 3. Create a new state array containing the previous unchanged objects as well and update state
-
-    const educationToBeChanged = educationSection[indexNumber];
-    const newEducation = {
-      ...educationSection[indexNumber],
-      [e.target.id]: e.target.value,
-    };
-    const newState = educationSection.map((educationItem) =>
-      educationItem[e.target.id] === newEducation[e.target.id]
-        ? newEducation
-        : educationItem
-    );
-    setEducationSection((prevState) => newState);
-    console.log("NewEducation", newEducation);
-    console.log("newState", newState);
-    console.log(e.target.id);
-    console.log(indexNumber);
+    const { name, value } = e.target;
+    const updatedEducations = [...educationSection];
+    updatedEducations[indexNumber][name] = value;
+    setEducationSection(updatedEducations);
   }
 
   function handleEducationSectionAdd(e) {
@@ -62,11 +47,16 @@ function App() {
       schoolGraduate: "",
     };
 
-    setEducationSection(educationSection.concat(newEducation));
+    setEducationSection([...educationSection, newEducation]);
   }
 
-  function handleEducationSectionDelete(e) {
-    // TO DO //
+  function handleEducationSectionDelete(index) {
+    if (educationSection.length === 1) {
+      alert("You must have studied somewhere :/");
+      return;
+    }
+    const updatedEducation = educationSection.filter((item, i) => i !== index);
+    setEducationSection(updatedEducation);
   }
 
   return (
