@@ -1,10 +1,10 @@
 import Input from "./Input";
 import Section from "./Section";
-import { FaUser } from "react-icons/fa";
+import { AiOutlineUser } from "react-icons/ai";
 
 const About = ({ aboutSection, aboutSectionHandler }) => {
   return (
-    <Section sectionTitle="About" sectionIcon={<FaUser size={21} />}>
+    <Section sectionTitle="About" sectionIcon={<AiOutlineUser />}>
       <Input
         labelText="First Name:"
         inputId="firstName"
@@ -60,6 +60,8 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
           placeholder="Make yourself shine, baby!"
           id="about"
           rows="4"
+          value={aboutSection.about}
+          onChange={aboutSectionHandler}
         ></textarea>
       </div>
     </Section>

@@ -10,6 +10,7 @@ function App() {
     address: "",
     phone: "",
     mailAddress: "",
+    about: "",
   });
   const [experienceSection, setExperienceSection] = useState([
     {

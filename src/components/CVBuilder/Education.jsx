@@ -1,9 +1,10 @@
 import Input from "./Input";
 import Section from "./Section";
+import { SlGraduation } from "react-icons/sl";
 
 const Education = ({ experienceSection, experienceSectionHandler }) => {
   return (
-    <Section sectionTitle="Education">
+    <Section sectionTitle="Education" sectionIcon={<SlGraduation />}>
       <Input
         labelText="School:"
         inputId={`school-${Math.floor(Math.random() * 100)}`}
