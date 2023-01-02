@@ -1,5 +1,6 @@
 import About from "./About";
 import EducationGroup from "./EducationGroup";
+import ExperienceGroup from "./ExperienceGroup";
 
 const CVBuilder = ({
   aboutSection,
@@ -8,9 +9,13 @@ const CVBuilder = ({
   educationSectionHandler,
   addEducation,
   deleteEducation,
+  experienceSection,
+  experienceSectionHandler,
+  addExperience,
+  deleteExperience,
 }) => {
   return (
-    <div className="space-y-2">
+    <div className="container space-y-2">
       <About
         aboutSection={aboutSection}
         aboutSectionHandler={aboutSectionHandler}
@@ -20,6 +25,12 @@ const CVBuilder = ({
         educationSectionHandler={educationSectionHandler}
         onAdd={addEducation}
         onDelete={deleteEducation}
+      />
+      <ExperienceGroup
+        experienceSection={experienceSection}
+        experienceSectionHandler={experienceSectionHandler}
+        onAdd={addExperience}
+        onDelete={deleteExperience}
       />
     </div>
   );

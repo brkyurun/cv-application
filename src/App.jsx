@@ -22,7 +22,7 @@ function App() {
       schoolGraduate: "",
     },
   ]);
-  const [experience, setExperience] = useState([
+  const [experienceSection, setExperienceSection] = useState([
     {
       jobTitle: "",
       companyName: "",
@@ -46,7 +46,7 @@ function App() {
     setEducationSection(updatedEducations);
   }
 
-  function handleEducationSectionAdd(e) {
+  function handleEducationSectionAdd() {
     const newEducation = {
       schoolName: "",
       schoolLocation: "",
@@ -68,6 +68,33 @@ function App() {
     setEducationSection(updatedEducation);
   }
 
+  function handleExperienceSectionChange(e, indexNumber) {
+    const { name, value } = e.target;
+    const updatedExperiences = [...experienceSection];
+    updatedExperiences[indexNumber][name] = value;
+    setExperienceSection(updatedExperiences);
+  }
+
+  function handleExperienceSectionAdd() {
+    const newExperience = {
+      jobTitle: "",
+      companyName: "",
+      companyLocation: "",
+      startDate: "",
+      endDate: "",
+      aboutJob: "",
+    };
+
+    setExperienceSection([...experienceSection, newExperience]);
+  }
+
+  function handleExperienceSectionDelete(index) {
+    const updatedExperiences = experienceSection.filter(
+      (item, i) => i !== index
+    );
+    setExperienceSection(updatedExperiences);
+  }
+
   return (
     <>
       <Header />
@@ -79,6 +106,10 @@ function App() {
           educationSectionHandler={handleEducationSectionChange}
           addEducation={handleEducationSectionAdd}
           deleteEducation={handleEducationSectionDelete}
+          experienceSection={experienceSection}
+          experienceSectionHandler={handleExperienceSectionChange}
+          addExperience={handleExperienceSectionAdd}
+          deleteExperience={handleExperienceSectionDelete}
         />
       </main>
     </>
