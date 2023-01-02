@@ -7,14 +7,20 @@ function App() {
     firstName: "",
     lastName: "",
     jobTitle: "",
+    address: "",
+    phone: "",
     mailAddress: "",
   });
+  const [experienceSection, setExperienceSection] = useState([
+    {
+      school: "",
+    },
+  ]);
 
   function handleAboutSectionChange(e) {
     setAboutSection((prevState) => {
       return { ...prevState, [e.target.id]: e.target.value };
     });
-    console.log(aboutSection);
   }
 
   return (
