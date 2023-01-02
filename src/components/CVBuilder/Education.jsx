@@ -1,6 +1,6 @@
 import Input from "./Input";
-import Section from "./Section";
 import { SlGraduation } from "react-icons/sl";
+import SectionTitle from "./SectionTitle";
 
 const Education = ({
   educationSection,
@@ -10,10 +10,11 @@ const Education = ({
   indexNumber,
 }) => {
   return (
-    <Section
-      sectionTitle={`Education ${indexNumber + 1}`}
-      sectionIcon={<SlGraduation />}
-    >
+    <>
+      <SectionTitle
+        icon={<SlGraduation />}
+        title={`Education ${indexNumber + 1}`}
+      />
       <Input
         labelText="School:"
         inputId={`schoolName-${indexNumber + 1}`}
@@ -84,7 +85,7 @@ const Education = ({
           Delete
         </button>
       </div>
-    </Section>
+    </>
   );
 };
 

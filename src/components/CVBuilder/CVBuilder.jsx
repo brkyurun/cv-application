@@ -1,5 +1,5 @@
 import About from "./About";
-import Education from "./Education";
+import EducationGroup from "./EducationGroup";
 
 const CVBuilder = ({
   aboutSection,
@@ -15,18 +15,12 @@ const CVBuilder = ({
         aboutSection={aboutSection}
         aboutSectionHandler={aboutSectionHandler}
       />
-      {educationSection.map((educationPart, index) => {
-        return (
-          <Education
-            key={index}
-            indexNumber={index}
-            educationSection={educationPart}
-            educationSectionHandler={educationSectionHandler}
-            onAdd={addEducation}
-            onDelete={deleteEducation}
-          />
-        );
-      })}
+      <EducationGroup
+        educationSection={educationSection}
+        educationSectionHandler={educationSectionHandler}
+        onAdd={addEducation}
+        onDelete={deleteEducation}
+      />
     </div>
   );
 };

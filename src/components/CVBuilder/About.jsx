@@ -1,10 +1,12 @@
 import Input from "./Input";
 import Section from "./Section";
 import { AiOutlineUser } from "react-icons/ai";
+import SectionTitle from "./SectionTitle";
 
 const About = ({ aboutSection, aboutSectionHandler }) => {
   return (
-    <Section sectionTitle="About" sectionIcon={<AiOutlineUser />}>
+    <Section>
+      <SectionTitle icon={<AiOutlineUser size={24} />} title="About" />
       <Input
         labelText="First Name:"
         inputId="firstName"
