@@ -38,7 +38,6 @@ function App() {
     setAboutSection((prevState) => {
       return { ...prevState, [e.target.name]: e.target.value };
     });
-    console.log(e.target.name);
   }
 
   function handleEducationSectionChange(e, indexNumber) {

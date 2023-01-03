@@ -67,6 +67,7 @@ const About = ({ aboutSection, aboutSectionHandler }) => {
           className="resize-none rounded-md border py-1 px-2 outline-offset-2 placeholder:font-light placeholder:italic"
           placeholder="Make yourself shine, baby!"
           id="about"
+          name="about"
           rows="4"
           value={aboutSection.about}
           onChange={aboutSectionHandler}
