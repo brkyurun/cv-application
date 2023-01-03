@@ -52,4 +52,42 @@ const experienceSectionDummy = [
   },
 ];
 
-export { aboutSectionDummy, educationSectionDummy, experienceSectionDummy };
+const aboutSectionEmpty = {
+  firstName: "",
+  lastName: "",
+  jobTitle: "",
+  address: "",
+  phone: "",
+  mailAddress: "",
+  about: "",
+};
+
+const educationSectionEmpty = [
+  {
+    schoolName: "",
+    schoolLocation: "",
+    schoolDegree: "",
+    schoolSubject: "",
+    schoolStart: "",
+    schoolGraduate: "",
+  },
+];
+
+const experienceSectionEmpty = [
+  {
+    jobTitle: "",
+    companyName: "",
+    companyLocation: "",
+    startDate: "",
+    endDate: "",
+  },
+];
+
+export {
+  aboutSectionDummy,
+  educationSectionDummy,
+  experienceSectionDummy,
+  aboutSectionEmpty,
+  educationSectionEmpty,
+  experienceSectionEmpty,
+};

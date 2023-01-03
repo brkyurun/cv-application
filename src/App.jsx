@@ -2,6 +2,14 @@ import Header from "./components/Header";
 import CVBuilder from "./components/CVBuilder";
 import CVPreview from "./components/CVPreview";
 import Footer from "./components/Footer";
+import {
+  aboutSectionDummy,
+  educationSectionDummy,
+  experienceSectionDummy,
+  aboutSectionEmpty,
+  educationSectionEmpty,
+  experienceSectionEmpty,
+} from "./dummyData";
 import { useState } from "react";
 
 function App() {
@@ -33,6 +41,7 @@ function App() {
       endDate: "",
     },
   ]);
+  const [isLightbulbToggled, setIsLightbulbToggled] = useState(false);
 
   function handleAboutSectionChange(e) {
     setAboutSection((prevState) => {
@@ -96,9 +105,26 @@ function App() {
     setExperienceSection(updatedExperiences);
   }
 
+  function handleLightbulbClick() {
+    if (isLightbulbToggled) {
+      setIsLightbulbToggled((prevVal) => !prevVal);
+      setAboutSection(aboutSectionEmpty);
+      setEducationSection(educationSectionEmpty);
+      setExperienceSection(experienceSectionEmpty);
+    } else {
+      setIsLightbulbToggled((prevVal) => !prevVal);
+      setAboutSection(aboutSectionDummy);
+      setEducationSection(educationSectionDummy);
+      setExperienceSection(experienceSectionDummy);
+    }
+  }
+
   return (
     <>
-      <Header />
+      <Header
+        onClickLightbulb={handleLightbulbClick}
+        isToggled={isLightbulbToggled}
+      />
       <main className="grid grid-cols-3 justify-items-end p-8">
         <CVBuilder
           aboutSection={aboutSection}
