@@ -17,6 +17,7 @@ const educationSectionDummy = [
     schoolSubject: "Computer Science",
     schoolStart: "2017",
     schoolGraduate: "2021",
+    schoolAbout: `Ate pizza \nDrew Cars \nDanced all day!`,
   },
   {
     schoolName: "Some Highschool",
@@ -25,6 +26,7 @@ const educationSectionDummy = [
     schoolSubject: "High School",
     schoolStart: "2013",
     schoolGraduate: "2017",
+    schoolAbout: `Studied hard \nHonorary Graduate \nDanced all day`,
   },
 ];
 
@@ -70,6 +72,7 @@ const educationSectionEmpty = [
     schoolSubject: "",
     schoolStart: "",
     schoolGraduate: "",
+    schoolAbout: "",
   },
 ];
 

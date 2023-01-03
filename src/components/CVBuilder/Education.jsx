@@ -16,24 +16,6 @@ const Education = ({
         title={`Education ${indexNumber + 1}`}
       />
       <Input
-        labelText="School:"
-        inputId={`schoolName-${indexNumber + 1}`}
-        name="schoolName"
-        inputType="text"
-        placeholder="Cambridge University"
-        inputValue={educationSection.schoolName}
-        inputHandler={(e) => educationSectionHandler(e, indexNumber)}
-      />
-      <Input
-        labelText="Location:"
-        inputId={`schoolLocation-${indexNumber + 1}`}
-        name="schoolLocation"
-        inputType="text"
-        placeholder="London / England"
-        inputValue={educationSection.schoolLocation}
-        inputHandler={(e) => educationSectionHandler(e, indexNumber)}
-      />
-      <Input
         labelText="Degree:"
         inputId={`schoolDegree-${indexNumber + 1}`}
         name="schoolDegree"
@@ -49,6 +31,24 @@ const Education = ({
         inputType="text"
         placeholder="Computer Science"
         inputValue={educationSection.schoolSubject}
+        inputHandler={(e) => educationSectionHandler(e, indexNumber)}
+      />
+      <Input
+        labelText="School:"
+        inputId={`schoolName-${indexNumber + 1}`}
+        name="schoolName"
+        inputType="text"
+        placeholder="Cambridge University"
+        inputValue={educationSection.schoolName}
+        inputHandler={(e) => educationSectionHandler(e, indexNumber)}
+      />
+      <Input
+        labelText="Location:"
+        inputId={`schoolLocation-${indexNumber + 1}`}
+        name="schoolLocation"
+        inputType="text"
+        placeholder="London / England"
+        inputValue={educationSection.schoolLocation}
         inputHandler={(e) => educationSectionHandler(e, indexNumber)}
       />
       <Input
@@ -69,6 +69,18 @@ const Education = ({
         inputValue={educationSection.schoolGraduate}
         inputHandler={(e) => educationSectionHandler(e, indexNumber)}
       />
+      <div className="col-span-2 flex flex-col gap-2">
+        <label htmlFor="schoolAbout">School Description:</label>
+        <textarea
+          className="resize-none rounded-md border py-1 px-2 outline-offset-2 placeholder:font-light placeholder:italic"
+          placeholder={`Start each sentence on a new line \nlike this to create a nice list!`}
+          id={`schoolAbout-${indexNumber + 1}`}
+          name="schoolAbout"
+          rows="4"
+          value={educationSection.schoolAbout}
+          onChange={educationSectionHandler}
+        ></textarea>
+      </div>
       <div className="col-span-2 flex items-center justify-around">
         <button
           type="button"

@@ -30,6 +30,7 @@ function App() {
       schoolSubject: "",
       schoolStart: "",
       schoolGraduate: "",
+      schoolAbout: "",
     },
   ]);
   const [experienceSection, setExperienceSection] = useState([
