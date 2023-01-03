@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import CVBuilder from "./components/CVBuilder";
+import CVPreview from "./components/CVPreview";
 import Footer from "./components/Footer";
 import { useState } from "react";
 
@@ -99,7 +100,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="p-8">
+      <main className="grid grid-cols-3 justify-items-end p-8">
         <CVBuilder
           aboutSection={aboutSection}
           aboutSectionHandler={handleAboutSectionChange}
@@ -111,6 +112,11 @@ function App() {
           experienceSectionHandler={handleExperienceSectionChange}
           addExperience={handleExperienceSectionAdd}
           deleteExperience={handleExperienceSectionDelete}
+        />
+        <CVPreview
+          aboutSection={aboutSection}
+          educationSection={educationSection}
+          experienceSection={experienceSection}
         />
       </main>
       <Footer />
