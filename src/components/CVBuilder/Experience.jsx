@@ -21,7 +21,7 @@ const Experience = ({
         name="jobTitle"
         inputType="text"
         placeholder="Junior Copy-Paste Enthusiast"
-        inputValue={experienceSection.schoolName}
+        inputValue={experienceSection.jobTitle}
         inputHandler={(e) => experienceSectionHandler(e, indexNumber)}
       />
       <Input
@@ -30,7 +30,7 @@ const Experience = ({
         name="companyName"
         inputType="text"
         placeholder="Googlesoftflix"
-        inputValue={experienceSection.schoolLocation}
+        inputValue={experienceSection.companyName}
         inputHandler={(e) => experienceSectionHandler(e, indexNumber)}
       />
       <Input
@@ -39,7 +39,7 @@ const Experience = ({
         name="companyLocation"
         inputType="text"
         placeholder="London"
-        inputValue={experienceSection.schoolDegree}
+        inputValue={experienceSection.companyLocation}
         inputHandler={(e) => experienceSectionHandler(e, indexNumber)}
       />
       <Input
@@ -48,7 +48,7 @@ const Experience = ({
         name="startDate"
         inputType="text"
         placeholder="05/21 or May 2021"
-        inputValue={experienceSection.schoolSubject}
+        inputValue={experienceSection.startDate}
         inputHandler={(e) => experienceSectionHandler(e, indexNumber)}
       />
       <Input
@@ -57,7 +57,7 @@ const Experience = ({
         name="endDate"
         inputType="text"
         placeholder="05/22 or May 2022 or Current"
-        inputValue={experienceSection.schoolStart}
+        inputValue={experienceSection.endDate}
         inputHandler={(e) => experienceSectionHandler(e, indexNumber)}
       />
       <div className="col-span-2 flex flex-col gap-2">
