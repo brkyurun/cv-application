@@ -7,8 +7,8 @@ const EducationPreview = ({ educationSection }) => {
       {Object.values(educationSection[0]).some((item) => item !== "") && (
         <h2 className="border-b-4 border-sky-700 text-2xl">Education</h2>
       )}
-      {educationSection.map((education) => (
-        <Education educationSection={education} />
+      {educationSection.map((education, index) => (
+        <Education key={index} educationSection={education} />
       ))}
     </div>
   );

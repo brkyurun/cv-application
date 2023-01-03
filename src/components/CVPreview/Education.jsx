@@ -1,4 +1,6 @@
 const Education = ({ educationSection }) => {
+  const schoolAboutArray = educationSection.schoolAbout.split("\n");
+
   return (
     <div className="mt-4 flex justify-between align-top">
       <div>
@@ -9,10 +11,18 @@ const Education = ({ educationSection }) => {
             {educationSection.schoolName}
           </span>
         </h3>
+        <ul>
+          {schoolAboutArray.map((aboutItem, index) => (
+            <li key={index} className="ml-6 list-disc">
+              {aboutItem.trim()}
+            </li>
+          ))}
+        </ul>
       </div>
       <div>
         <p>
-          {educationSection.schoolStart} - {educationSection.schoolGraduate}
+          {educationSection.schoolStart} {educationSection.schoolStart && "-"}{" "}
+          {educationSection.schoolGraduate}
         </p>
         <p>{educationSection.schoolLocation}</p>
       </div>

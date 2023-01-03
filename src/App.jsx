@@ -53,7 +53,13 @@ function App() {
   function handleEducationSectionChange(e, indexNumber) {
     const { name, value } = e.target;
     const updatedEducations = [...educationSection];
-    updatedEducations[indexNumber][name] = value;
+    if (name === "schoolAbout") {
+      console.log("Name", name);
+      console.log("Value", value);
+      console.log(updatedEducations);
+    } else {
+      updatedEducations[indexNumber][name] = value;
+    }
     setEducationSection(updatedEducations);
   }
 
@@ -126,7 +132,7 @@ function App() {
         onClickLightbulb={handleLightbulbClick}
         isToggled={isLightbulbToggled}
       />
-      <main className="grid grid-cols-3 justify-items-end p-8">
+      <main className="relative grid grid-cols-3 justify-items-end py-8 px-16">
         <CVBuilder
           aboutSection={aboutSection}
           aboutSectionHandler={handleAboutSectionChange}

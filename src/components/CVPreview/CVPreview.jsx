@@ -3,7 +3,7 @@ import EducationPreview from "./EducationPreview";
 
 const CVPreview = ({ aboutSection, educationSection, experienceSection }) => {
   return (
-    <div className="col-span-2 w-11/12 border-2 border-sky-700 bg-gray-50 px-16 text-center">
+    <div className="sticky top-4 col-span-2 h-[75rem] w-10/12 border-2 border-sky-700 bg-gray-50 px-16 text-center">
       <AboutPreview aboutSection={aboutSection} />
       <EducationPreview educationSection={educationSection} />
     </div>
