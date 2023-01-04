@@ -37,6 +37,8 @@ const experienceSectionDummy = [
     companyLocation: "London",
     startDate: "12/2022",
     endDate: "Current",
+    aboutJob:
+      "Copied around a million things which made me pursue creating a clipboard app so that I could keep track of my copied material, increasing my productivity by pretty darn much levels. \nPasted the things I've copied from my clipboard app to every codebase that I every laid my nasty dorito fingers upon, making other engies madd, brah. (they didn't like the doritos flavor I liked, otherwise everything was pretty darn chill, we even had sodie pops every now and then)",
   },
   {
     jobTitle: "Intern Copy-Paste Enthusiast",
@@ -44,6 +46,8 @@ const experienceSectionDummy = [
     companyLocation: "London",
     startDate: "06/2022",
     endDate: "11/2022",
+    aboutJob:
+      "Posted so much cringy bullshit on LinkedIn that even the Apple CEO Tim Kooc couldn't stand anymore and removed me from the internship program, but the amazing team at Googlesoftflix saw through my bullshit and decided that with my expertise in coffee brewing voodoo-jutsu, hire me so I can both learn AND keep shitposting on LinkedIn, increasing Googlesoftflix's impressions and attractiveness for young interns. \nStill to this day I don't know bro, maybe they pitied me?",
   },
   {
     jobTitle: "Barista",
@@ -51,6 +55,8 @@ const experienceSectionDummy = [
     companyLocation: "London",
     startDate: "02/2021",
     endDate: "11/2021",
+    aboutJob:
+      "CREATED GAJILLION BOZUNGAS AMOUNT OF CAFFEINATED DRINKS THAT IM SWTILL SCHAKING FROM OMG MAKE IT STAHP I KANT EVEN TYPE DUE TO DE CAFFEIN JITTERS HALP OH LAWD \nServed caffeinated coffee to customers who demanded uncaffeinated beans, increasing their anxiety and poop rates without their knowledge (they say that I'm an angel of kindness, but I don't think the court will think the same in the hearing of the class action lawsuit I got myself into over this :( pls gib job)",
   },
 ];
 
@@ -83,6 +89,7 @@ const experienceSectionEmpty = [
     companyLocation: "",
     startDate: "",
     endDate: "",
+    aboutJob: "",
   },
 ];
 
