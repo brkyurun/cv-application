@@ -24,7 +24,7 @@ const Education = ({ educationSection }) => {
           })}
         </ul>
       </div>
-      <div>
+      <div className="max-w-[38rem]">
         <p>
           {educationSection.schoolStart} {educationSection.schoolStart && "-"}{" "}
           {educationSection.schoolGraduate}

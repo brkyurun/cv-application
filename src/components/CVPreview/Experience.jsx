@@ -12,7 +12,7 @@ const Experience = ({ experienceSection }) => {
             {experienceSection.jobTitle}
           </p>
         </h3>
-        <ul className="">
+        <ul className="max-w-[38rem]">
           {listItems.map((item) => {
             if (item === "") return;
             return (
