@@ -78,7 +78,7 @@ const Education = ({
           name="schoolAbout"
           rows="4"
           value={educationSection.schoolAbout}
-          onChange={educationSectionHandler}
+          onChange={(e) => educationSectionHandler(e, indexNumber)}
         ></textarea>
       </div>
       <div className="col-span-2 flex items-center justify-around">

@@ -53,13 +53,14 @@ function App() {
   function handleEducationSectionChange(e, indexNumber) {
     const { name, value } = e.target;
     const updatedEducations = [...educationSection];
-    if (name === "schoolAbout") {
-      console.log("Name", name);
-      console.log("Value", value);
-      console.log(updatedEducations);
-    } else {
-      updatedEducations[indexNumber][name] = value;
-    }
+    console.log("Name", name);
+    console.log("Value", value);
+    // if (name === "schoolAbout") {
+    //   console.log(updatedEducations);
+    //   updatedEducations[indexNumber][name] = value;
+    // } else {
+    // }
+    updatedEducations[indexNumber][name] = value;
     setEducationSection(updatedEducations);
   }
 
