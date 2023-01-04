@@ -13,36 +13,13 @@ import {
 import { useState } from "react";
 
 function App() {
-  const [aboutSection, setAboutSection] = useState({
-    firstName: "",
-    lastName: "",
-    jobTitle: "",
-    address: "",
-    phone: "",
-    mailAddress: "",
-    about: "",
-  });
-  const [educationSection, setEducationSection] = useState([
-    {
-      schoolName: "",
-      schoolLocation: "",
-      schoolDegree: "",
-      schoolSubject: "",
-      schoolStart: "",
-      schoolGraduate: "",
-      schoolAbout: "",
-    },
-  ]);
-  const [experienceSection, setExperienceSection] = useState([
-    {
-      jobTitle: "",
-      companyName: "",
-      companyLocation: "",
-      startDate: "",
-      endDate: "",
-      aboutJob: "",
-    },
-  ]);
+  const [aboutSection, setAboutSection] = useState(aboutSectionEmpty);
+  const [educationSection, setEducationSection] = useState(
+    educationSectionEmpty
+  );
+  const [experienceSection, setExperienceSection] = useState(
+    experienceSectionEmpty
+  );
   const [isLightbulbToggled, setIsLightbulbToggled] = useState(false);
 
   function handleAboutSectionChange(e) {
