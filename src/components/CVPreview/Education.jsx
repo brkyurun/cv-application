@@ -1,4 +1,8 @@
 const Education = ({ educationSection }) => {
+  const listItems = educationSection.schoolAbout
+    .split("\n")
+    .map((str) => str.trim());
+
   return (
     <div className="mt-4 flex justify-between align-top">
       <div>
@@ -9,6 +13,16 @@ const Education = ({ educationSection }) => {
             {educationSection.schoolName}
           </span>
         </h3>
+        <ul className="">
+          {listItems.map((item) => {
+            if (item === "") return;
+            return (
+              <li key={item} className="ml-6 list-disc">
+                {item}
+              </li>
+            );
+          })}
+        </ul>
       </div>
       <div>
         <p>

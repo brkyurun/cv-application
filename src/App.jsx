@@ -40,6 +40,7 @@ function App() {
       companyLocation: "",
       startDate: "",
       endDate: "",
+      aboutJob: "",
     },
   ]);
   const [isLightbulbToggled, setIsLightbulbToggled] = useState(false);
@@ -53,13 +54,6 @@ function App() {
   function handleEducationSectionChange(e, indexNumber) {
     const { name, value } = e.target;
     const updatedEducations = [...educationSection];
-    console.log("Name", name);
-    console.log("Value", value);
-    // if (name === "schoolAbout") {
-    //   console.log(updatedEducations);
-    //   updatedEducations[indexNumber][name] = value;
-    // } else {
-    // }
     updatedEducations[indexNumber][name] = value;
     setEducationSection(updatedEducations);
   }
@@ -72,6 +66,7 @@ function App() {
       schoolSubject: "",
       schoolStart: "",
       schoolGraduate: "",
+      schoolAbout: "",
     };
 
     setEducationSection([...educationSection, newEducation]);
@@ -107,6 +102,10 @@ function App() {
   }
 
   function handleExperienceSectionDelete(index) {
+    if (experienceSection.length === 1) {
+      alert("If you don't have any experience, please leave this area blank.");
+      return;
+    }
     const updatedExperiences = experienceSection.filter(
       (item, i) => i !== index
     );
